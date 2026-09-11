@@ -53,7 +53,7 @@ def set_nav_page(page_name: str):
     """Safely navigate to another page in Streamlit, keeping sidebar in lockstep."""
     if HAS_STREAMLIT:
         st.session_state["nav_page"] = page_name
-        st.session_state["sidebar_nav_selection"] = page_name
+        
 
 
 def clear_cv_state():
