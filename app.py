@@ -95,9 +95,6 @@ def render_sidebar(gemini_client: GeminiClient):
     except ValueError:
         selected_index = 0
 
-    if st.session_state.get("sidebar_nav_selection") != current_page:
-        st.session_state["sidebar_nav_selection"] = current_page
-
     def on_nav_change():
         target = st.session_state.get("sidebar_nav_selection", "Home")
         set_nav_page(target)
