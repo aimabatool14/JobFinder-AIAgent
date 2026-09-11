@@ -95,20 +95,22 @@ def render_sidebar(gemini_client: GeminiClient):
     except ValueError:
         selected_index = 0
 
-  def on_nav_change(radio_key):
-    target = st.session_state.get(radio_key, "Home")
-    set_nav_page(target)
+ def on_nav_change(radio_key):
+        target = 
+     st.session_state.get(radio_key, "Home")
+        set_nav_page(target)
 
-radio_key = f"sidebar_nav_selection_{current_page}"
+    radio_key = 
+f"sidebar_nav_selection_{current_page}"
 
-selected = st.sidebar.radio(
-    "Navigation",
-    pages,
-    index=selected_index,
-    key=radio_key,
-    on_change=on_nav_change,
-    args=(radio_key,),
-)
+    selected = st.sidebar.radio(
+        "Navigation",
+        pages,
+        index=selected_index,
+        key=radio_key,
+        on_change=on_nav_change,
+        args=(radio_key,),
+    )
 
     st.sidebar.markdown("---")
 
